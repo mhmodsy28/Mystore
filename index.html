@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بيانات حساب Apple ID</title>
+    <!-- مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; padding: 20px; }
@@ -16,6 +17,10 @@
         .copy-btn { background: #5e35b1; color: white; border: none; padding: 6px 15px; border-radius: 6px; cursor: pointer; font-size: 0.8em; margin-right: 10px; transition: 0.3s; }
         .copy-btn:hover { background: #4527a0; }
         .alert { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; font-size: 0.9em; margin-top: 20px; border: 1px solid #ffeeba; text-align: center; line-height: 1.6; }
+        
+        /* الـ QR Code */
+        .qr-section { text-align: center; margin: 25px 0; }
+        .qr-section img { width: 150px; height: 150px; border-radius: 10px; border: 2px solid #ddd; }
         
         /* زر الواتساب العائم */
         .whatsapp-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; padding: 15px 20px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; font-size: 20px; z-index: 1000; }
@@ -69,12 +74,22 @@
         </div>
     </div>
 
+    <!-- قسم الـ QR Code -->
+    <div class="qr-section">
+        <div class="label" style="margin-bottom: 10px;">امسح الباركود للوصول السريع للبيانات:</div>
+        <img src="204758.png" alt="QR Code">
+        <p style="font-size: 0.8em; color: #666; margin-top: 5px;">
+            هذا الـ QR Code مخصص لفتح صفحة بيانات الحساب الخاصة بك فوراً، لضمان عدم حدوث أخطاء عند نقل البيانات.
+        </p>
+    </div>
+
     <div class="alert">
         ⚠️ <strong>تنبيه هام:</strong> تستخدم فقط حساب Apple ID لتنزيل التطبيقات من متجر App Store ولا تستخدم حساب iCloud. نحن لسنا مسؤولين عن إغلاق الحساب في حال استخدامه كحساب iCloud.<br><br>
         عند طلب كود تحقق أو توثيق أثناء تسجيل الدخول، يرجى التواصل مع هذا الرقم للحصول على الكود: <strong>+963992320306</strong>
     </div>
 </div>
 
+<!-- زر واتساب -->
 <a href="https://wa.me/963992320306" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
