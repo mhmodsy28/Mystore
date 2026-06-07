@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات حساب Apple ID</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+        h2 { color: #5e35b1; text-align: center; margin-bottom: 20px; }
+        .field-group { margin-bottom: 15px; }
+        .label { font-weight: bold; color: #555; margin-bottom: 5px; font-size: 0.9em; }
+        .input-box { display: flex; align-items: center; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 10px; }
+        .input-box input { border: none; background: transparent; width: 100%; font-size: 1em; color: #333; outline: none; }
+        .copy-btn { background: #5e35b1; color: white; border: none; padding: 6px 15px; border-radius: 6px; cursor: pointer; font-size: 0.8em; margin-right: 10px; transition: 0.3s; }
+        .copy-btn:hover { background: #4527a0; }
+        .alert { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; font-size: 0.9em; margin-top: 20px; border: 1px solid #ffeeba; text-align: center; line-height: 1.6; }
+        
+        /* زر الواتساب العائم */
+        .whatsapp-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; padding: 15px 20px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-decoration: none; font-size: 20px; z-index: 1000; }
+        
+        /* رسالة التأكيد عند النسخ */
+        #toast { visibility: hidden; background: #333; color: #fff; text-align: center; border-radius: 6px; padding: 10px; position: fixed; z-index: 1001; bottom: 100px; left: 50%; transform: translateX(-50%); }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>بيانات حساب Apple ID</h2>
+    
+    <div class="field-group">
+        <div class="label">البريد الإلكتروني:</div>
+        <div class="input-box">
+            <input type="text" value="D2eba6a628@emailinbo.live" id="email" readonly>
+            <button class="copy-btn" onclick="copy('email')">نسخ</button>
+        </div>
+    </div>
+
+    <div class="field-group">
+        <div class="label">كلمة المرور:</div>
+        <div class="input-box">
+            <input type="text" value="Aalmwt10" id="pass" readonly>
+            <button class="copy-btn" onclick="copy('pass')">نسخ</button>
+        </div>
+    </div>
+
+    <div class="field-group">
+        <div class="label">تاريخ الميلاد:</div>
+        <div class="input-box">
+            <input type="text" value="2003/01/01" id="dob" readonly>
+            <button class="copy-btn" onclick="copy('dob')">نسخ</button>
+        </div>
+    </div>
+
+    <div class="field-group">
+        <div class="label">رقم الهاتف المربوط:</div>
+        <div class="input-box">
+            <input type="text" value="+4915216613979" id="phone" readonly>
+            <button class="copy-btn" onclick="copy('phone')">نسخ</button>
+        </div>
+    </div>
+
+    <div class="field-group">
+        <div class="label">مفتاح الاسترداد:</div>
+        <div class="input-box">
+            <input type="text" value="63Q2-FUDR-W8GG-89PY-JXU2-DBB5-TFAT" id="key" readonly>
+            <button class="copy-btn" onclick="copy('key')">نسخ</button>
+        </div>
+    </div>
+
+    <div class="alert">
+        ⚠️ <strong>تنبيه هام:</strong> تستخدم فقط حساب Apple ID لتنزيل التطبيقات من متجر App Store ولا تستخدم حساب iCloud. نحن لسنا مسؤولين عن إغلاق الحساب في حال استخدامه كحساب iCloud.<br><br>
+        عند طلب كود تحقق أو توثيق أثناء تسجيل الدخول، يرجى التواصل مع هذا الرقم للحصول على الكود: <strong>+963992320306</strong>
+    </div>
+</div>
+
+<a href="https://wa.me/963992320306" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div id="toast">تم النسخ بنجاح!</div>
+
+<script>
+    function copy(id) {
+        var copyText = document.getElementById(id);
+        copyText.select();
+        document.execCommand("copy");
+        var x = document.getElementById("toast");
+        x.style.visibility = "visible";
+        setTimeout(function(){ x.style.visibility = "hidden"; }, 2000);
+    }
+</script>
+
+</body>
+</html>
